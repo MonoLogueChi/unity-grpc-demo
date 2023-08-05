@@ -1,0 +1,6 @@
+[submodule "client/protobuf-unity"]
+	path = client/protobuf-unity
+	url = https://github.com/5argon/protobuf-unity.git
+[submodule "client/YetAnotherHttpHandler"]
+	path = client/YetAnotherHttpHandler
+	url = https://github.com/Cysharp/YetAnotherHttpHandler.git
