@@ -4,8 +4,8 @@ This is a DEMO of Unity using GRPC
 
 ### install software
 
-- visual studio 2022 include .net7
-- unity3d 2022.3.6f1 include il2cpp
+- visual studio 2022 with .net7
+- unity3d 2022.3.6f1 with il2cpp
 
 ### clone
 
@@ -30,4 +30,6 @@ D:\Users\mc\Documents\Unity\unity-grpc-demo\client\grpc.tools.2.56.2\tools\windo
 
 - [YetAnotherHttpHandler](https://github.com/Cysharp/YetAnotherHttpHandler) YetAnotherHttpHandler brings the power of HTTP/2 (and gRPC) to Unity and .NET Standard.
 - [protobuf-unity](https://github.com/5argon/protobuf-unity) Automatic .proto files compilation in Unity project to C# as you edit them, plus utilities.
+- [Google.Protobuf](https://www.nuget.org/packages/Google.Protobuf/) C# runtime library for Protocol Buffers - Google's data interchange format.
+- [Grpc.AspNetCore](https://www.nuget.org/packages/Grpc.AspNetCore/)
 - ...
