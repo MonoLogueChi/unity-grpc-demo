@@ -61,6 +61,14 @@ namespace GrpcService0 {
         __Marshaller_greet_HelloRequest,
         __Marshaller_greet_HelloReply);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcService0.HelloRequest, global::GrpcService0.HelloReply> __Method_SayHello1 = new grpc::Method<global::GrpcService0.HelloRequest, global::GrpcService0.HelloReply>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "SayHello1",
+        __Marshaller_greet_HelloRequest,
+        __Marshaller_greet_HelloReply);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -79,6 +87,12 @@ namespace GrpcService0 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::GrpcService0.HelloReply> SayHello(global::GrpcService0.HelloRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task SayHello1(grpc::IAsyncStreamReader<global::GrpcService0.HelloRequest> requestStream, grpc::IServerStreamWriter<global::GrpcService0.HelloReply> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -160,6 +174,16 @@ namespace GrpcService0 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::GrpcService0.HelloRequest, global::GrpcService0.HelloReply> SayHello1(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SayHello1(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::GrpcService0.HelloRequest, global::GrpcService0.HelloReply> SayHello1(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_SayHello1, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GreeterClient NewInstance(ClientBaseConfiguration configuration)
@@ -174,7 +198,8 @@ namespace GrpcService0 {
     public static grpc::ServerServiceDefinition BindService(GreeterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();
+          .AddMethod(__Method_SayHello, serviceImpl.SayHello)
+          .AddMethod(__Method_SayHello1, serviceImpl.SayHello1).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -185,6 +210,7 @@ namespace GrpcService0 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GreeterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_SayHello, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcService0.HelloRequest, global::GrpcService0.HelloReply>(serviceImpl.SayHello));
+      serviceBinder.AddMethod(__Method_SayHello1, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::GrpcService0.HelloRequest, global::GrpcService0.HelloReply>(serviceImpl.SayHello1));
     }
 
   }

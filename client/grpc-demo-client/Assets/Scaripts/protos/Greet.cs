@@ -25,9 +25,11 @@ namespace GrpcService0 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgtncmVldC5wcm90bxIFZ3JlZXQiHAoMSGVsbG9SZXF1ZXN0EgwKBG5hbWUY",
-            "ASABKAkiHQoKSGVsbG9SZXBseRIPCgdtZXNzYWdlGAEgASgJMj0KB0dyZWV0",
+            "ASABKAkiHQoKSGVsbG9SZXBseRIPCgdtZXNzYWdlGAEgASgJMnYKB0dyZWV0",
             "ZXISMgoIU2F5SGVsbG8SEy5ncmVldC5IZWxsb1JlcXVlc3QaES5ncmVldC5I",
-            "ZWxsb1JlcGx5Qg+qAgxHcnBjU2VydmljZTBiBnByb3RvMw=="));
+            "ZWxsb1JlcGx5EjcKCVNheUhlbGxvMRITLmdyZWV0LkhlbGxvUmVxdWVzdBoR",
+            "LmdyZWV0LkhlbGxvUmVwbHkoATABQg+qAgxHcnBjU2VydmljZTBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
